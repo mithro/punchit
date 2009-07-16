@@ -5,8 +5,8 @@ from pyglet import *
 w = window.Window(800, 100)
 
 # Step 2 - Need some graphics!
-happy = resource.image('c-h.png')
-angry = resource.image('c-a.png')
+happy = resource.image('ch.png')
+angry = resource.image('ca.png')
 
 c = sprite.Sprite(happy)
 h = sprite.Sprite(resource.image('f.png'))
