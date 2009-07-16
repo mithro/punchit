@@ -2,7 +2,7 @@ import rabbyt as r
 from pyglet import *
 
 # Step 1 - Create a window
-w = window.Window(width=800, height=100)
+w = window.Window(800, 100)
 r.set_default_attribs()
 
 # Step 2 - Put some graphics on the window
