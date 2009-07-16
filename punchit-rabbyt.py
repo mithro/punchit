@@ -10,13 +10,13 @@ r.set_default_attribs()
 # Load some media
 c = r.Sprite('ch.png')
 f = r.Sprite('f.png')
-media.load('b.wav')
+s = media.load('b.wav')
 
 c.y, f.y = 50, 50
 
 @w.event
 def on_draw():
-	r.clear((0,0,0))
+	r.clear()
 	f.render()
 	c.render()
 	w.flip()
@@ -35,17 +35,15 @@ clock.schedule(r.add_time)
 # Step 5 - Add violance
 @w.event
 def on_mouse_press(x, y, b, m):
-    if b == mouse.LEFT:
-		# Check the chimp and hand positions
-		if r.collisions.aabb_collide([c, f]):
-			# Play some sound
-			s = media.load('b.wav')
-			s.play()
+	# Check the chimp and hand positions
+	if r.collisions.aabb_collide([c, f]):
+		# Play some sound
+		s.play()
 
-			# Make the chimp angry
-			c.texture = 'ca.png'
+		# Make the chimp angry
+		c.texture = 'ca.png'
 
-			# Hide the hand
-			f.texture.visible = 0
+		# Stop the chimp
+		c.x = float(c.x)
 
 app.run()
