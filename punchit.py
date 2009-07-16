@@ -9,21 +9,21 @@ happy = resource.image('ch.png')
 angry = resource.image('ca.png')
 
 c = sprite.Sprite(happy)
-h = sprite.Sprite(resource.image('f.png'))
+f = sprite.Sprite(resource.image('f.png'))
 s = media.load('b.wav')
 
 @w.event
 def on_draw():
 	w.clear()
-	h.draw()
+	f.draw()
 	c.draw()
 
 # Step 3 - Make the hand move
 from pyglet.window import mouse
 @w.event
 def on_mouse_motion(x, y, dx, dy):
-	h.x = x - h.width/2
-	h.y = y - h.height/2
+	f.x = x - f.width/2
+	f.y = y - f.height/2
 
 # Step 4 - make the chimp move
 c.dx = 300
@@ -42,7 +42,7 @@ clock.schedule_interval(update, 1/120.0)
 def on_mouse_press(x, y, button, modifiers):
     if button == mouse.LEFT:
 		# Check the chimp and hand positions
-		if h.x < c.x and c.x+c.width < h.x+h.width:
+		if f.x < c.x and c.x+c.width < f.x+h.width:
 			# Play some sound
 			s.play()
 
@@ -50,6 +50,6 @@ def on_mouse_press(x, y, button, modifiers):
 			c.image = angry
 
 			# Hide the hand
-			h.visible = 0			
+			f.visible = 0			
 
 app.run()
