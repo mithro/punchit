@@ -5,12 +5,12 @@ from pyglet import *
 w = window.Window(800, 100)
 
 # Step 2 - Need some graphics!
-happy = resource.image('chimp-happy.png')
-angry = resource.image('chimp-angry.png')
+happy = resource.image('c-h.png')
+angry = resource.image('c-a.png')
 
 c = sprite.Sprite(happy)
-h = sprite.Sprite(resource.image('fist.png'))
-s = media.load('boom.wav')
+h = sprite.Sprite(resource.image('f.png'))
+s = media.load('b.wav')
 
 @w.event
 def on_draw():
