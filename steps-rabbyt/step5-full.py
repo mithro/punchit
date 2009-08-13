@@ -10,8 +10,7 @@ rabbyt.set_default_attribs()
 # Load some media
 chimp = rabbyt.Sprite('chimp-happy.png')
 fist = rabbyt.Sprite('fist.png')
-# Static source means we can play it over and over again...
-sound = pyglet.media.StaticSource(pyglet.media.load('boom.wav'))
+sound = pyglet.media.load('boom.wav', streaming=False)
 
 chimp.y, fist.y = 50, 50
 

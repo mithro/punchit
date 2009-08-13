@@ -10,7 +10,7 @@ r.set_default_attribs()
 # Load some media
 c = r.Sprite('ch.png')
 f = r.Sprite('f.png')
-s = media.load('b.wav')
+s = media.load('b.wav', streaming=False)
 
 c.y, f.y = 50, 50
 
