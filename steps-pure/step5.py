@@ -37,7 +37,9 @@ clock.schedule_interval(update, 1/120.0)
 @w.event
 def on_mouse_press(x, y, b, _):
   if f.x < c.x and c.x+c.width < f.x+f.width:
+    s = pyglet.media.load('boom.wav')
     s.play()
+
     c.image = a
     f.visible = 0
 
