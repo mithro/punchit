@@ -35,11 +35,10 @@ def update(dt):
 clock.schedule_interval(update, 1/120.0)
 
 @w.event
-def on_mouse_press(x, y, button, modifiers):
-  if button == mouse.LEFT:
-    if f.x < c.x and c.x+c.width < f.x+f.width:
-      s.play()
-      c.image = a
-      f.visible = 0
+def on_mouse_press(x, y, b, _):
+  if f.x < c.x and c.x+c.width < f.x+f.width:
+    s.play()
+    c.image = a
+    f.visible = 0
 
 app.run()
