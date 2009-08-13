@@ -8,7 +8,7 @@ a = resource.image('chimp-angry.png')
 
 c = sprite.Sprite(h)
 f = sprite.Sprite(resource.image('fist.png'))
-s = media.load('boom.wav')
+s = media.load('boom.wav', streaming=False)
 
 @w.event
 def on_draw():
@@ -37,10 +37,9 @@ clock.schedule_interval(update, 1/120.0)
 @w.event
 def on_mouse_press(x, y, b, _):
   if f.x < c.x and c.x+c.width < f.x+f.width:
-    s = pyglet.media.load('boom.wav')
-    s.play()
+      s.play()
 
-    c.image = a
-    f.visible = 0
+      c.image = a
+      f.visible = 0
 
 app.run()

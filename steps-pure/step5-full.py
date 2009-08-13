@@ -8,7 +8,7 @@ chimp_angry = pyglet.resource.image('chimp-angry.png')
 
 chimp = pyglet.sprite.Sprite(chimp_happy)
 fist = pyglet.sprite.Sprite(pyglet.resource.image('fist.png'))
-sound = pyglet.media.load('boom.wav')
+sound = pyglet.media.load('boom.wav', streaming=False)
 
 @win.event
 def on_draw():
@@ -37,7 +37,6 @@ pyglet.clock.schedule_interval(update, 1/120.0)
 @win.event
 def on_mouse_press(x, y, b, _):
   if fist.x < chimp.x and chimp.x+chimp.width < fist.x+fist.width:
-      sound = pyglet.media.load('boom.wav')
       sound.play()
 
       chimp.image = chimp_angry
