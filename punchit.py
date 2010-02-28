@@ -10,7 +10,7 @@ angry = resource.image('ca.png')
 
 c = sprite.Sprite(happy)
 f = sprite.Sprite(resource.image('f.png'))
-s = media.load('b.wav')
+s = media.load('b.wav', streaming=False)
 
 @w.event
 def on_draw():
@@ -42,7 +42,7 @@ clock.schedule_interval(update, 1/120.0)
 def on_mouse_press(x, y, button, modifiers):
     if button == mouse.LEFT:
 		# Check the chimp and hand positions
-		if f.x < c.x and c.x+c.width < f.x+h.width:
+		if f.x < c.x and c.x+c.width < f.x+f.width:
 			# Play some sound
 			s.play()
 
