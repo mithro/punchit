@@ -37,9 +37,6 @@ def on_draw():
 	chimp.render()
 	label.render()
 
-	win.flip()
-
-
 # Step 3 - Make the hand move 
 from pyglet.window import mouse
 @win.event

@@ -19,7 +19,6 @@ def on_draw():
 	rabbyt.clear()
 	fist.render()
 	chimp.render()
-	win.flip()
 
 # Step 3 - Make the hand move 
 from pyglet.window import mouse

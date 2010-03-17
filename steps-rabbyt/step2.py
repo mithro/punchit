@@ -19,6 +19,5 @@ def on_draw():
 	r.clear()
 	f.render()
 	c.render()
-	w.flip()
 
 app.run()

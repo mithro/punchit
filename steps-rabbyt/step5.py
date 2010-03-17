@@ -19,7 +19,6 @@ def on_draw():
 	r.clear()
 	f.render()
 	c.render()
-	w.flip()
 
 # Step 3 - Make the hand move 
 from pyglet.window import mouse
